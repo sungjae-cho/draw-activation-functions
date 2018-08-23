@@ -1,14 +1,12 @@
 import numpy as np
 
 def linear(x):
-	y = np.copy(x)
-	return y
+	return x
 
 def binary_threshold(x):
-	y = np.copy(x)
-	y[y > 0] = 1
-	y[y <= 0] = 0
-	return y
+	x[x > 0] = 1
+	x[x <= 0] = 0
+	return x
 
 def sigmoid(x):
 	return 1 / (1 + np.exp(-x))
@@ -17,6 +15,4 @@ def tanh(x):
 	return np.tanh(x)
 
 def relu(x):
-	y = np.copy(x)
-	y[y <= 0] = 0
-	return y 	
+	return np.maximum(0, x)	
