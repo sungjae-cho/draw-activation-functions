@@ -3,7 +3,7 @@ import numpy as np
 def linear(x):
 	return x
 
-def binary_threshhold(x):
+def binary_threshold(x):
 	if x > 0:
 		return 1
 	else:
